@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script type="text/javascript" src="js/json.js"></script>
+
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th  scope="col">Nome</th>
+      <th  scope="col">Curso</th>
+      <th  scope="col">Semestre</th>
+      <th  scope="col"> Categoria </th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<script type="text/javascript">
+  var json = {
+   person: [
+   {
+
+  "id": "1",
+  "nome": "Luiza Esteves",
+  "curso": "Administração",
+  "semestre": 3,
+  "categoria": 11
+},
+{
+  "id": "2",
+  "nome": "Daniel Ishutin",
+  "curso": "Engenharia",
+  "semestre": 5,
+  "categoria": 9
+},
+
+{
+  "id": "3",
+  "nome": "Mikael Silva",
+  "curso": "Análise de Sistemas",
+  "semestre": 1,
+  "categoria": 4
+},
+{
+   "id": "4",
+  "nome": "Karen Andrade",
+  "curso": "Sistemas para Internet",
+  "semestre": 6,
+  "categoria": 4
+},
+{
+  "id": "5",
+  "nome": "Jackeline Souza",
+  "curso": "Designer",
+  "semestre": 5,
+  "categoria": 1
+},
+{
+ "id": "6",
+  "nome": "Christopher Alessandro",
+  "curso": "Medicina",
+  "semestre": 7,
+  "categoria": 3
+},
+{
+  "id": "7",
+  "nome": "Tomas Keliman",
+  "curso": "Gastronomia",
+  "semestre": 2,
+  "categoria": 2
+  }
+ ]
+};
+
+
+for(var i=0;i< json.person.length; i++){
+  var html = "<tr>";
+  html +="<td>"+json.person[i].id+"</td>";
+  html +="<td>"+json.person[i].nome+"</td>";
+  html +="<td>"+json.person[i].curso+"</td>";
+  html +="<td>"+json.person[i].semestre+"</td>";
+  html +="<td>"+json.person[i].categoria+"</td>";
+  html +="</tr>";
+  $('table tbody').append(html);
+}
+</script>
+</body>
+</html>
+
